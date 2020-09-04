@@ -26,14 +26,21 @@ const App = () => {
   const getSearch = e => {
     e.preventDefault();
     setQuery(search);
-    setSearch('');
+    // setSearch('');
 
   }
 
   return (
     <div className="App">
       <form onSubmit={getSearch} className="search-form">
-        <input className="search-bar" type="text" value={search} onChange={updateSearch} />
+        <label for="sector">Choose Sector:</label>
+        <select className="search-bar" value={search} name="search" onChange={updateSearch}>
+          <option value="technology">Technology</option>
+          <option value="industrials">Industrials</option>
+          <option value="energy">Energy</option>
+          <option value="services">Services</option>
+        </select>
+        {/* <input className="search-bar" type="text" value={search} onChange={updateSearch} /> */}
         <button className="search-button" type="submit">Search</button>
       </form>
       <div className="stocks">
