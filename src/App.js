@@ -1,60 +1,18 @@
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 import './App.css';
-import Stock from './Stock';
+import Stock from './components/Stock';
+import Nav from './components/Nav';
+import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
+
 
 const App = () => {
-
-  const [stocks, setStocks] = useState([]);
-  const [search, setSearch] = useState('');
-  const [query, setQuery] = useState('Technology');
-
-  useEffect(() => {
-    const getStocks = async () => {
-      const res = await fetch(`https://nottingham-1848-slayer-robin.azurewebsites.net/api/screen/${query}`)
-      const data = await res.json();
-      setStocks(data);
-      console.log(data);
-    }
-    getStocks();
-  }, [query]);
-
-  const updateSearch = e => {
-    setSearch(e.target.value);
-    console.log(search);
-  };
-
-  const getSearch = e => {
-    e.preventDefault();
-    setQuery(search);
-    // setSearch('');
-
-  }
-
   return (
-    <div className="App">
-      <form onSubmit={getSearch} className="search-form">
-        <label for="sector">Choose Sector:</label>
-        <select className="search-bar" value={search} name="search" onChange={updateSearch}>
-          <option value="technology">Technology</option>
-          <option value="industrials">Industrials</option>
-          <option value="energy">Energy</option>
-          <option value="services">Services</option>
-        </select>
-        {/* <input className="search-bar" type="text" value={search} onChange={updateSearch} /> */}
-        <button className="search-button" type="submit">Search</button>
-      </form>
-      <div className="stocks">
-        {stocks.map(stock => (
-          <Stock
-            key={stock.symbol}
-            symbol={stock.symbol}
-            companyName={stock.companyName}
-            marketCap={stock.marketCap}
-          />
-        ))}
+    <Router>
+      <div className="app">
+        <Nav />
       </div>
-    </div>
-  );
+    </Router>
+  )
 }
 
 export default App;
