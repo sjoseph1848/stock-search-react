@@ -1,7 +1,126 @@
-.App {
-  min-height: 100vh;
-  background: gray;
+/* You can add global styles to this file, and also import other style files */
+@import url('https://fonts.googleapis.com/css2?family=Pattaya&family=Poppins:wght@400;500&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
+
+html {
+  font-size: 62.5%;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+}
+
+h1 {
+  font-size: 2.6rem;
+}
+
+h2 {
+  font-size: 4.8rem;
+}
+
+h3 {
+  font-size: 3rem;
+  font-weight: normal;
+}
+
+h4,
+h5 {
+  font-size: 2.8rem;
+}
+
+li,
+button,
+label,
+input p {
+  font-size: 2rem;
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  color: white;
+  text-decoration: none;
+}
+
+button {
+  padding: 2rem 6rem;
+  background: white;
+  border: none;
+  color: #29b104;
+  font-size: 1.8rem;
+  cursor: pointer;
+}
+
+.main-head {
+  background: #197901;
+  color: white;
+}
+
+nav {
+  min-height: 10vh;
+  padding: 2rem;
+  display: flex;
+  width: 90%;
+  margin: auto;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+nav ul {
+  display: flex;
+  flex: 1 1 40rem;
+  justify-content: space-around;
+  align-items: center;
+  list-style: none;
+}
+
+.logo {
+  flex: 2 1 40rem;
+  font-family: 'Pattaya', sans-serif;
+  font-weight: 400;
+}
+
+/* Media Queries */
+@media screen and (max-width: 932px) {
+  html {
+    font-size: 45%;
+  }
+  nav {
+    text-align: center;
+  }
+
+  .logo {
+    padding: 2rem;
+  }
+}
+
+/* Hero Section */
+.intro {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.intro img {
+  width: 100%;
+}
+
+.intro-img {
+  flex: 1 1 30rem;
+}
+
+.intro-text {
+  flex: 1 1 30rem;
+}
+
+/* Stock Search Form */
 
 .search-form {
   min-height: 10vh;

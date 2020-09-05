@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import Stock from './components/Stock';
+import Stock from '../Stock';
 
 const Search = () => {
     const [stocks, setStocks] = useState([]);

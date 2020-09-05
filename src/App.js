@@ -1,15 +1,24 @@
 import React from 'react';
 import './App.css';
-import Stock from './components/Stock';
 import Nav from './components/Nav';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
+import Home from './components/pages/Home';
+import News from './components/pages/News';
+import StockSearch from './components/pages/StockSearch';
+import StockDetail from './components/pages/StockDetail';
 
 
 const App = () => {
   return (
     <Router>
-      <div className="app">
+      <div>
         <Nav />
+        <Switch>
+          <Route path='/' exact component={Home} />
+          <Route path='/news' component={News} />
+          <Route path='/search' component={StockSearch} />
+          <Route path='/search/:id' component={StockDetail} />
+        </Switch>
       </div>
     </Router>
   )
