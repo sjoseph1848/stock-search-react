@@ -190,6 +190,35 @@ nav ul {
   padding: 4rem 0rem;
   color: white;
 }
+
+/* Analysis Section */
+#analysis {
+  display: flex;
+  flex-wrap: wrap;
+  min-height: 40vh;
+}
+
+#analysis img {
+  width: 100%;
+}
+
+.analysis-img {
+  flex: 1 1 20rem;
+}
+
+.analysis-text {
+  flex: 1 1 30rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.analysis-text p {
+  font-size: 3rem;
+  text-align: center;
+}
+
 /* Stock Search Form */
 
 .search-form {
