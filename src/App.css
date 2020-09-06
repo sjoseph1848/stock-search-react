@@ -100,6 +100,10 @@ nav ul {
   .logo {
     padding: 2rem;
   }
+
+  .intro-text p {
+    font-size: 1rem;
+  }
 }
 
 /* Hero Section */
@@ -113,13 +117,56 @@ nav ul {
 }
 
 .intro-img {
-  flex: 1 1 30rem;
+  flex: 1 1 40rem;
 }
 
 .intro-text {
   flex: 1 1 30rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 }
 
+.intro-text p {
+  font-size: 3rem;
+  text-align: center;
+}
+
+/* .freelance {
+  text-align: center;
+} */
+
+#Person {
+  animation: man 5s linear;
+}
+
+#Apple {
+  animation: fruit 5s ease-in-out;
+}
+
+@keyframes man {
+  from {
+    transform: translateY(-15%);
+  }
+  to {
+    transform: translateY(0%);
+  }
+}
+
+@keyframes fruit {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* Info Section */
+.info {
+  height: 100vh;
+}
 /* Stock Search Form */
 
 .search-form {
