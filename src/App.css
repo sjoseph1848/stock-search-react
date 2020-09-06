@@ -100,6 +100,10 @@ nav ul {
   .logo {
     padding: 2rem;
   }
+  .intro-text {
+    padding: 10rem;
+    animation: fruit 3s ease-in-out;
+  }
 
   .intro-text p {
     font-size: 1rem;
@@ -133,10 +137,6 @@ nav ul {
   text-align: center;
 }
 
-/* .freelance {
-  text-align: center;
-} */
-
 #Person {
   animation: man 5s linear;
 }
@@ -164,8 +164,31 @@ nav ul {
 }
 
 /* Info Section */
-.info {
-  height: 100vh;
+#info {
+  min-height: 40vh;
+  background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.4)),
+    url('./assets/news.svg');
+  background-size: cover;
+  background-position: top;
+  display: flex;
+  align-items: center;
+}
+
+.info-head {
+  width: 90%;
+  margin: auto;
+}
+
+.info-head h2 {
+  padding: 1rem 0rem;
+  text-decoration: underline;
+  text-decoration-thickness: 0.5rem;
+  color: white;
+}
+
+.info-head h3 {
+  padding: 4rem 0rem;
+  color: white;
 }
 /* Stock Search Form */
 
