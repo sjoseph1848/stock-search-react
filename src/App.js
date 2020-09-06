@@ -6,6 +6,7 @@ import Home from './components/pages/Home';
 import News from './components/pages/News';
 import StockSearch from './components/pages/StockSearch';
 import StockDetail from './components/pages/StockDetail';
+import Footer from './components/section/Footer';
 
 
 const App = () => {
@@ -19,6 +20,7 @@ const App = () => {
           <Route path='/search' component={StockSearch} />
           <Route path='/search/:id' component={StockDetail} />
         </Switch>
+        <Footer />
       </div>
     </Router>
   )
