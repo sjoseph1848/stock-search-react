@@ -29,7 +29,7 @@ const Search = () => {
     }
 
     return (
-        <div className="App">
+        <section id="search">
             <form onSubmit={getSearch} className="search-form">
                 <label htmlFor="sector">Choose Sector:</label>
                 <select className="search-bar" value={search} name="search" onChange={updateSearch}>
@@ -53,7 +53,7 @@ const Search = () => {
                     />
                 ))}
             </div>
-        </div>
+        </section>
     );
 }
 

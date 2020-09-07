@@ -237,6 +237,12 @@ input:focus {
   min-height: 100vh;
 }
 
+/* End News */
+
+/* Search */
+#search {
+  min-height: 100vh;
+}
 footer {
   color: white;
   background: #197901;
