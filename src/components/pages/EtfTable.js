@@ -11,12 +11,12 @@ const EtfTable = ({ name, symbol, price, change, volume }) => {
                 </div>
                 <div className="etf-data">
                     <p className="etf-price">${price}</p>
-                    <p className="etf-volume">{volume}</p>
+                    {/* <p className="etf-volume">{volume}</p>
                     {change < 0 ? (
                         <p className="etf-percent red">{change}%</p>)
                         : (
                             <p className="coin-percent green">{change}%</p>
-                        )}
+                        )} */}
                 </div>
             </div>
         </div>
