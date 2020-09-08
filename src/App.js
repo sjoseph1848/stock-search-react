@@ -7,7 +7,7 @@ import News from './components/pages/News';
 import StockSearch from './components/pages/StockSearch';
 import StockDetail from './components/pages/StockDetail';
 import Footer from './components/section/Footer';
-
+import Etf from './components/pages/Etf';
 
 const App = () => {
   return (
@@ -18,6 +18,7 @@ const App = () => {
           <Route path='/' exact component={Home} />
           <Route path='/news' component={News} />
           <Route path='/search' component={StockSearch} />
+          <Route path='/etf' component={Etf} />
           <Route path='/search/:id' component={StockDetail} />
         </Switch>
         <Footer />

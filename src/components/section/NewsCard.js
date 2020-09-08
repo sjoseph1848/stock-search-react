@@ -6,7 +6,7 @@ const NewsCard = ({ card: { title, urlToImage, url } }) => {
         <div>
             <p>{title}</p>
             <p>{urlToImage}</p>
-            <a href={url} style={{ color: 'black' }} target="_blank">Read More</a>
+            <a href={url} style={{ color: 'black' }} rel="noopener noreferrer" target="_blank">Read More</a>
         </div>
     )
 }

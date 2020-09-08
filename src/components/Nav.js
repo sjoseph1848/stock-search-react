@@ -14,6 +14,9 @@ const Nav = () => {
                     <Link to="/news">
                         <li>News</li>
                     </Link>
+                    <Link to="/etf">
+                        <li>ETF</li>
+                    </Link>
                     <Link to="/search">
                         <li>Search</li>
                     </Link>
