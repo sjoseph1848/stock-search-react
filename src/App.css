@@ -212,6 +212,10 @@ input:focus {
   outline: none;
 }
 
+select:focus {
+  outline: none;
+}
+
 .search-bar {
   width: 50%;
   border: none;
@@ -219,7 +223,7 @@ input:focus {
 }
 
 .search-button {
-  background: cornflowerblue;
+  background: #197901;
   border: none;
   padding: 10px 20px;
   color: white;
