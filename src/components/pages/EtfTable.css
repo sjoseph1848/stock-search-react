@@ -1,51 +1,7 @@
-.etf-container {
-  display: flex;
-  justify-content: center;
-}
-
-.etf-row {
-  display: flex;
-  flex-direction: row;
-  justify-items: start;
-  align-items: center;
-  height: 80px;
-  border-bottom: 1px solid #d7d7d7;
-  /* width: 900px; */
-}
-
-.etf {
-  display: flex;
-  align-items: center;
-  padding-right: 24px;
-  min-width: 300px;
-}
-
-.etf-symbol {
-  text-transform: uppercase;
-  margin-left: 5rem;
-}
-
-.etf-data {
-  display: flex;
-  text-align: center;
-  justify-content: space-between;
-  width: 100%;
-}
-
-.etf-price {
-  width: 30px;
-}
-
-.etf-volume {
-  width: 200px;
-}
-
-.etf-marketcap {
-  width: 240px;
-}
-
-.etf-percent {
-  width: 80px;
+.etf-card {
+  background-color: #a9a9a9;
+  padding: 1rem;
+  min-height: 4rem;
 }
 
 .red {

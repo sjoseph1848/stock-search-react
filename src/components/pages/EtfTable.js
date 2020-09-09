@@ -1,24 +1,37 @@
 import React from 'react';
 import './EtfTable.css'
+// import { Link } from 'react-router-dom';
 
-const EtfTable = ({ name, symbol, price, change, volume }) => {
+const EtfTable = ({ name, symbol, price, change, volume, companyName }) => {
+    let percentageChange;
+    if (change !== undefined) {
+        if (change < 0) {
+            percentageChange = <li className="etf-percent red">Change: {change}%</li>
+        } else {
+            percentageChange = <li className="etf-percent green">Change {change}%</li>
+        }
+    } else {
+        percentageChange = '';
+    }
+
     return (
-        <div className="etf-container">
-            <div className="etf-row">
-                <div className="etf">
-                    <p>{name.substring(0, 20)}</p>
-                    <p className="etf-symbol">{symbol}</p>
-                </div>
-                <div className="etf-data">
-                    <p className="etf-price">${price}</p>
-                    {/* <p className="etf-volume">{volume}</p>
-                    {change < 0 ? (
-                        <p className="etf-percent red">{change}%</p>)
-                        : (
-                            <p className="coin-percent green">{change}%</p>
-                        )} */}
-                </div>
-            </div>
+        <div className="etf-card">
+            {/* <Link to={`/search/${symbol}`}> */}
+            <ul>
+                {name !== undefined ? (
+                    <li>{name.substring(0, 20)}</li>
+                ) :
+                    (
+                        <li>{companyName}</li>
+                    )
+                }
+
+                <li>{symbol}</li>
+                <li>Price: ${price}</li>
+                <li>Volume: {volume}</li>
+                {percentageChange}
+            </ul>
+
         </div>
     )
 }

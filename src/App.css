@@ -199,42 +199,6 @@ nav ul {
   text-align: center;
 }
 
-/* Stock Search Form */
-
-.search-form {
-  min-height: 10vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-input:focus {
-  outline: none;
-}
-
-select:focus {
-  outline: none;
-}
-
-.search-bar {
-  width: 50%;
-  border: none;
-  padding: 10px;
-}
-
-.search-button {
-  background: #197901;
-  border: none;
-  padding: 10px 20px;
-  color: white;
-}
-
-.stocks {
-  display: flex;
-  justify-content: space-around;
-  flex-wrap: wrap;
-}
-
 /* News */
 
 #news {
@@ -245,12 +209,14 @@ select:focus {
 
 /* Search */
 #search {
-  min-height: 100vh;
+  min-height: 10vh;
 }
 
 /* ETF */
-.etf-head {
+.etf {
   min-height: 100vh;
+}
+.etf-head {
   display: flex;
   flex-direction: column;
   align-items: center;

@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
-import Stock from '../Stock';
+import EtfTable from './EtfTable';
+import './StockSearch.css';
 
 const Search = () => {
     const [stocks, setStocks] = useState([]);
@@ -29,31 +30,34 @@ const Search = () => {
     }
 
     return (
-        <section id="search">
-            <form onSubmit={getSearch} className="search-form">
-                <label htmlFor="sector">Choose Sector:</label>
-                <select className="search-bar" value={search} name="search" onChange={updateSearch}>
-                    <option value="technology">Technology</option>
-                    <option value="industrials">Industrials</option>
-                    <option value="energy">Energy</option>
-                    <option value="services">Services</option>
-                </select>
-                {/* <input className="search-bar" type="text" value={search} onChange={updateSearch} /> */}
-                <button className="search-button" type="submit">Search</button>
-            </form>
-            <div className="stocks">
+        <div className="stock-search">
+            <section id="search">
+                <form onSubmit={getSearch} className="search-form">
+                    <label htmlFor="sector">Sector:</label>
+                    <select className="search-bar" value={search} name="search" onChange={updateSearch}>
+                        <option value="technology">Technology</option>
+                        <option value="industrials">Industrials</option>
+                        <option value="energy">Energy</option>
+                        <option value="services">Services</option>
+                    </select>
+                    <button className="search-button" type="submit">Search</button>
+                </form>
+            </section>
+            <div className="stock-cards">
                 {stocks.map(stock => (
-                    <Stock
+                    <EtfTable
                         key={stock.symbol}
                         symbol={stock.symbol}
-                        companyName={stock.companyName}
-                        marketCap={stock.marketCap}
+                        name={stock.name}
                         price={stock.price}
-                        lastAnnualDividend={stock.lastAnnualDividend}
+                        change={stock.change}
+                        volume={stock.volume}
+                        companyName={stock.companyName}
                     />
                 ))}
             </div>
-        </section>
+
+        </div>
     );
 }
 

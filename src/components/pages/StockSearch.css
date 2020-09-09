@@ -1,0 +1,49 @@
+/* Stock Search Form */
+
+.search-form {
+  min-height: 10vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+input:focus {
+  outline: none;
+}
+
+select:focus {
+  outline: none;
+}
+
+.search-bar {
+  width: 50%;
+  border: none;
+  padding: 10px;
+}
+
+.search-button {
+  background: #197901;
+  border: none;
+  padding: 10px 20px;
+  color: white;
+}
+
+.stock-cards {
+  min-height: 90vh;
+  max-width: 1200px;
+  margin: 5rem auto;
+  display: grid;
+  grid-gap: 1rem;
+}
+
+@media (min-width: 600px) {
+  .stock-cards {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 900px) {
+  .stock-cards {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
