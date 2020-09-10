@@ -5,9 +5,6 @@ import './News.css';
 import Loading from '../../components/section/Loading';
 
 
-
-
-
 class News extends Component {
     state = {
         newsCards: [],
@@ -30,7 +27,10 @@ class News extends Component {
             <section id="news">
                 <div className="news-cards">
                     {!this.state.done ? (
-                        <Loading />
+                        <>
+                            <h1>Make Sam an offer?<br /></h1>
+                            <Loading />
+                        </>
                     ) : (
                             this.showNews()
                         )
