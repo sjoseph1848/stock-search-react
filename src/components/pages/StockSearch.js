@@ -12,20 +12,17 @@ const Search = () => {
             const res = await fetch(`https://nottingham-1848-slayer-robin.azurewebsites.net/api/screen/${query}`)
             const data = await res.json();
             setStocks(data);
-            console.log(data);
         }
         getStocks();
     }, [query]);
 
     const updateSearch = e => {
         setSearch(e.target.value);
-        console.log(search);
     };
 
     const getSearch = e => {
         e.preventDefault();
         setQuery(search);
-        // setSearch('');
 
     }
 

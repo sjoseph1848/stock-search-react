@@ -10,7 +10,6 @@ const Etf = () => {
         axios.get('https://nottingham-1848-slayer-robin.azurewebsites.net/api/etf/all')
             .then(res => {
                 setEtfs(res.data)
-                console.log(res.data);
             }).catch(error => console.log(error))
     }, [])
 
