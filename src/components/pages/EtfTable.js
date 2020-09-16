@@ -19,7 +19,7 @@ const EtfTable = ({ name, symbol, price, change, volume, companyName }) => {
             {/* <Link to={`/search/${symbol}`}> */}
             <ul>
                 {name !== undefined ? (
-                    <li>{name.substring(0, 20)}</li>
+                    <li>{name !== null ? name.substring(0, 20) : null}</li>
                 ) :
                     (
                         <li>{companyName}</li>
