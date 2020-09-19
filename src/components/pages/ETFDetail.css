@@ -1,0 +1,35 @@
+.etf-detail-container {
+  min-height: 100vh;
+  margin: 50px;
+  overflow: hidden;
+}
+
+.etf-detail {
+  min-height: 80vh;
+  background: cornflowerblue;
+  height: 200px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.etf-detail-summary-table {
+  background: crimson;
+  min-height: 30vh;
+  padding: 100px;
+}
+
+.etf-detail-summary-holder {
+  background: darkcyan;
+  min-height: 30vh;
+  padding: 100px;
+  flex: 1 0 300px;
+}
+
+.etf-detail-summary-chart {
+  background: yellow;
+  min-width: 100%;
+  margin-top: 25px;
+  padding: 30px;
+  min-height: 50vh;
+}

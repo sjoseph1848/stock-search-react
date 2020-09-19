@@ -5,9 +5,9 @@ import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import Home from './components/pages/Home';
 import News from './components/pages/News';
 import StockSearch from './components/pages/StockSearch';
-import StockDetail from './components/pages/StockDetail';
 import Footer from './components/section/Footer';
 import Etf from './components/pages/Etf';
+import ETFDetail from './components/pages/ETFDetail';
 
 const App = () => {
   return (
@@ -19,7 +19,7 @@ const App = () => {
           <Route path='/news' component={News} />
           <Route path='/search' exact component={StockSearch} />
           <Route path='/etf' component={Etf} />
-          <Route path='/search/:id' component={StockDetail} />
+          <Route path='/search/etf/:id' component={ETFDetail} />
         </Switch>
         <Footer />
       </div>
